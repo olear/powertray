@@ -1,26 +1,27 @@
-PowerTray - Manage Power States for DracoLinux
-http://www.dracolinux.org
-
-Copyright (c) 2014 Ole Andre Rodlie <olear@dracolinux.org>. All rights reserved.
-
-ABOUT
+PowerTray
+========= 
 
 A simple power manager for your systray. Will monitor battery level and suspend/shutdown if needed.
 
-INSTALL
+Install
+=======
 
-qmake PREFIX=foo
-make
-make (INSTALL_ROOT=foo) install
+ # qmake PREFIX=foo
+ # make
+ # make (INSTALL_ROOT=foo) install
 
-REQUIREMENTS
+Requirements
+============
 
 - Qt4
 - DBus
 - HAL
 - System Tray
 
-LICENSE
+License
+=======
+
+Copyright (c) 2014 Ole Andre Rodlie olear@dracolinux.org. All rights reserved.
 
 PowerTray is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 2.
 
