@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>tray.png</file>
+        <file>tray-warn.png</file>
+    </qresource>
+</RCC>
