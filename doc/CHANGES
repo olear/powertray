@@ -1,3 +1,9 @@
+commit b6adf7af987cc2b4e5e2f181358d30086168e6d3
+Author: Ole Andre Rodlie <olear@dracolinux.org>
+Date:   Fri May 23 17:16:16 2014 +0200
+
+    remember to reset pixmap
+
 commit b21afd4daf7647aeb128b161273edf3c07b2482e
 Author: Ole Andre Rodlie <olear@dracolinux.org>
 Date:   Fri May 23 05:11:35 2014 +0200
