@@ -1,0 +1,11 @@
+commit b21afd4daf7647aeb128b161273edf3c07b2482e
+Author: Ole Andre Rodlie <olear@dracolinux.org>
+Date:   Fri May 23 05:11:35 2014 +0200
+
+    add support for more lids
+
+commit 1a522ebacdca1030e0ad9ab49eecb2f4aa13c5f6
+Author: Ole Andre Rodlie <olear@dracolinux.org>
+Date:   Fri May 23 04:27:39 2014 +0200
+
+    imported status quo.

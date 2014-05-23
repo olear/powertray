@@ -106,7 +106,7 @@ void PowerTray::monitorBattery()
     if (battery_level>0)
     {
         trayIcon->setToolTip(tr("Battery")+" "+QString::number(battery_level)+"%");
-        //trayIcon->setIcon(QIcon(":/res/tray.png"));
+        trayIcon->setIcon(QIcon(":/res/tray.png"));
         if (battery_active)
         {
             if (battery_level<=10) // Battery level is Low, notify user

@@ -5,7 +5,7 @@
 # PowerTray is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 2.
 #
 
-VERSION                              = 20140523.1
+VERSION                              = 20140523.2
 QT                                  += core gui dbus
 TARGET                               = powertray
 TEMPLATE                             = app
@@ -29,7 +29,7 @@ isEmpty(DOCDIR) {
 
 target.path                          = $${PREFIX}/bin
 target_docs.path                     = $$DOCDIR/$${TARGET}-$${VERSION}
-target_docs.files                    = doc/COPYING doc/README
+target_docs.files                    = doc/COPYING doc/README doc/CHANGES
 
 INSTALLS                            += target target_docs
 QMAKE_CLEAN                         += -r $${DESTDIR} Makefile

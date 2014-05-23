@@ -1,7 +1,7 @@
 Summary: Manage power states
 Name: powertray
 
-Version: 20140523.1
+Version: 20140523.2
 Release: 1%{dist}
 License: GPLv2
 
