@@ -6,9 +6,9 @@ A simple power manager for your systray. Will monitor battery level and suspend/
 Install
 =======
 
-# qmake PREFIX=foo
-# make
-# make (INSTALL_ROOT=foo) install
+qmake PREFIX=foo
+make
+make (INSTALL_ROOT=foo) install
 
 Requirements
 ============
