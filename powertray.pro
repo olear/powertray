@@ -5,7 +5,7 @@
 # PowerTray is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 2.
 #
 
-VERSION                              = 20140523
+VERSION                              = 20140523.1
 QT                                  += core gui dbus
 TARGET                               = powertray
 TEMPLATE                             = app

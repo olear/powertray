@@ -25,23 +25,33 @@ PowerTray::~PowerTray()
 
 void PowerTray::monitorLid()
 {
-    QString acpi_filename = "/proc/acpi/button/lid/LID0/state";
-    QFile acpi_lid(acpi_filename);
-    if (acpi_lid.exists())
+    bool do_suspend = false;
+    QStringList lids;
+    lids << "/proc/acpi/button/lid/LID/state" << "/proc/acpi/button/lid/LID0/state";
+    for (int i = 0; i < lids.size(); ++i)
     {
-        if (acpi_lid.open(QIODevice::ReadOnly))
+        QFile lid(lids.at(i));
+        if (lid.exists())
         {
-            QString line;
-            QTextStream textStream(&acpi_lid);
-            line = textStream.readAll().simplified();
-            if (line == "state: closed")
-            { // User closed lid, suspend
-                QDBusConnection conn = QDBusConnection::systemBus();
-                QDBusInterface computer("org.freedesktop.Hal","/org/freedesktop/Hal/devices/computer","org.freedesktop.Hal.Device.SystemPowerManagement",conn);
-                computer.call("Suspend",1);
+            if (lid.open(QIODevice::ReadOnly))
+            {
+                QString line;
+                QTextStream textStream(&lid);
+                line = textStream.readAll().simplified();
+                if (line == "state: closed")
+                {
+                    do_suspend = true;
+                }
+                lid.close();
             }
-            acpi_lid.close();
         }
+    }
+
+    if (do_suspend)
+    {
+        QDBusConnection conn = QDBusConnection::systemBus();
+        QDBusInterface computer("org.freedesktop.Hal","/org/freedesktop/Hal/devices/computer","org.freedesktop.Hal.Device.SystemPowerManagement",conn);
+        computer.call("Suspend",1);
     }
 
     QTimer::singleShot(1000,this,SLOT(monitorLid())); // loop
