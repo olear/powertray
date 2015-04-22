@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
     QApplication::setOrganizationDomain("dracolinux.org");
     PowerTray w;
 
-    if (!QSystemTrayIcon::isSystemTrayAvailable())
+    /*if (!QSystemTrayIcon::isSystemTrayAvailable())
     {
         return 1;
-    }
+    }*/
 
     return a.exec();
 }
